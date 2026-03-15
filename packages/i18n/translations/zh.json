@@ -1,0 +1,33 @@
+{
+	"app": {
+		"menu": {
+			"notes": "笔记管理",
+			"tags": "标签管理",
+			"fell": "感受管理",
+			"pictures": "图片管理"
+		}
+	},
+	"common": {
+		"confirmation": {
+			"cancel": "取消",
+			"confirm": "确认"
+		},
+		"menu": {
+			"blog": "博客",
+			"changelog": "更新日志",
+			"contact": "联系我们",
+			"dashboard": "控制台",
+			"docs": "文档",
+			"faq": "常见问题",
+			"login": "登录",
+			"pricing": "定价"
+		},
+		"tableOfContents": {
+			"title": "本页目录"
+		},
+		"actions": {
+			"continue": "继续",
+			"verify": "验证"
+		}
+	}
+}
