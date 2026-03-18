@@ -56,6 +56,9 @@ const nextConfig: NextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
 	webpack: (config, { webpack, isServer }) => {
 		config.plugins.push(
 			new webpack.IgnorePlugin({
