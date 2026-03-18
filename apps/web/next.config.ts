@@ -3,10 +3,13 @@ import { withContentCollections } from "@content-collections/next";
 import { PrismaPlugin } from "@prisma/nextjs-monorepo-workaround-plugin";
 import type { NextConfig } from "next";
 import nextIntlPlugin from "next-intl/plugin";
+import path from "node:path";
 
 const withNextIntl = nextIntlPlugin("./modules/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+	outputFileTracingRoot: path.join(__dirname, "../../"),
+	outputFileTracing: false,
 	transpilePackages: ["@repo/api", "@repo/auth", "@repo/database"],
 	images: {
 		remotePatterns: [
@@ -54,6 +57,9 @@ const nextConfig: NextConfig = {
 		if (isServer) {
 			config.plugins.push(new PrismaPlugin());
 		}
+
+		// Prevent webpack from following symlinks outside the project (fixes EPERM on Windows)
+		config.resolve.symlinks = false;
 
 		return config;
 	},
