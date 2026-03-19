@@ -3,6 +3,14 @@ lockfileVersion: '9.0'
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
+  onlyBuiltDependencies:
+    - '@prisma/client'
+    - '@prisma/engines'
+    - '@tailwindcss/oxide'
+    - esbuild
+    - prisma
+    - prisma-zod-generator
+    - sharp
 
 overrides:
   '@types/react': 19.0.0
