@@ -3,10 +3,12 @@ import { withContentCollections } from "@content-collections/next";
 import { PrismaPlugin } from "@prisma/nextjs-monorepo-workaround-plugin";
 import type { NextConfig } from "next";
 import nextIntlPlugin from "next-intl/plugin";
+import path from "path";
 
 const withNextIntl = nextIntlPlugin("./modules/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+	outputFileTracingRoot: path.join(__dirname, "../../"),
 	transpilePackages: [
 		"@repo/api",
 		"@repo/auth",
