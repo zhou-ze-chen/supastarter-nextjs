@@ -5,17 +5,13 @@ export const config = {
 	// Internationalization
 	i18n: {
 		// Whether internationalization should be enabled (if disabled, you still need to define the locale you want to use below and set it as the default locale)
-		enabled: true,
+		enabled: false,
 		// Define all locales here that should be available in the app
 		// You need to define a label that is shown in the language selector and a currency that should be used for pricing with this locale
 		locales: {
 			en: {
 				currency: "USD",
 				label: "English",
-			},
-			de: {
-				currency: "USD",
-				label: "Deutsch",
 			},
 		},
 		// The default locale is used if no locale is provided
