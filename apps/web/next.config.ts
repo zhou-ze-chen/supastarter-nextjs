@@ -8,6 +8,7 @@ import path from "path";
 const withNextIntl = nextIntlPlugin("./modules/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+	output: "standalone",
 	outputFileTracingRoot: path.join(__dirname, "../../"),
 	transpilePackages: [
 		"@repo/api",
